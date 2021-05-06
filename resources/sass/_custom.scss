@@ -1,0 +1,144 @@
+
+.bg-gray{
+    background: rgb(207, 206, 206);
+}
+.bg-light-green{
+    background: rgb(203, 238, 203);
+}
+.bg-light-greenapple{
+    background: rgb(233, 243, 217);
+}
+.bg-dark-green{
+    background-color: rgb(30, 86, 49);
+}
+/* buttons */
+.button-dark-green{
+    background-color: rgb(30, 86, 49);
+    /* padding: 5px 24px; */
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.button-quiz{
+    width: 150px;
+    background-color: rgb(30, 86, 49);
+    border: none;
+    outline: none;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.button-quiz:hover {
+    text-decoration: none;
+    color: rgb(152, 151, 163);
+    
+  }
+
+
+.button-dark-green:hover {
+    background:rgb(20, 56, 32);
+    
+}
+
+
+/* Popup Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+  
+.modal-content {
+    margin: 10% auto;
+    width: 300px;
+    max-width: 80%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+    
+}
+  
+.modal-header h2,
+.modal-footer h3 {
+    margin: 0;
+}
+.modal-header {
+    
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+} 
+.modal-body {
+    padding: 10px 20px;
+}
+.close {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+@keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+
+/* -----Scroll------ */
+.container-scroll {
+    height: 500px;
+    width: 100%;
+    padding: 5px;
+    overflow-y: auto;
+    overflow-x: hidden
+  }
+  #style-1::-webkit-scrollbar-track
+  {
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      background-color: #F5F5F5;
+  }
+  
+  #style-1::-webkit-scrollbar
+  {
+      width: 12px;
+      background-color: #F5F5F5;
+  }
+  
+  #style-1::-webkit-scrollbar-thumb
+  {
+      border-radius: 10px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #555;
+  }
+
+  :root {
+    --modal-duration: 1s;
+    --modal-color: #428bca;
+  }
+ 
+  
+
+  
