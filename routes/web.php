@@ -51,3 +51,6 @@ Route::get('/create-quiz', function () {
 Route::get('/created', function () {
     return view('teacher.created');
 });
+Route::get('/scorelist', function () {
+    return view('teacher.scorelist');
+});

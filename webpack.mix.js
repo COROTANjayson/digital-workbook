@@ -13,5 +13,8 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/popup.js', 'public/js')
+    .js('resources/js/datetimepicker.js',  'public/js')
+    .js('resources/js/createquiz.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sourceMaps();
+

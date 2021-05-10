@@ -39,52 +39,56 @@
             </div>
             <div class="col-md-9 border-left">
                 <div class="container-scroll" id="style-1">
-                    <div class="container-fluid">
+                    <div class="">
                         <h1>FL-Quiz-4</h1>
-                        <div class="container p-3 ml-4">   
-                            <ul class="list-inline">
-                                    <li class="list-inline-item">1. Question?</li>
-                                    <li class="list-inline-item text-secondary ml-8">2 points</li>
-                            </ul>
-
+                        <div class="container my-4">
                             <div class="container">
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Option 1</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio2">Option 2</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio3">Option 3</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio4">Option 4</label>
-                                </div> 
-                            </div>   
+                                <form id="question-form" action="" method="GET">
+                                    <div id="container-form">
+                                        <div class="text-right py-2">
+                                            <button type="button" class="btn btn-success" id="addQuestion">Add Question</button>
+                                        </div>
+                                        <div class="question-box container bg-white p-3 border border-secondary rounded" id="questionBox">
+                                            <label for="question" class="form-label">Question: </label>
+                                            <input type="text" name="question" placeholder="Enter Question" class="form-control" />
+                                            
+                                            <div class=" container text-center py-3" id="option-container">
+                                                <table class="table my-2 table-borderless" >
+                                                    <tbody id="table-option">
+                                                      <tr>
+                                                        <td class="align-middle"><input type="text" name="option" placeholder="Option" class="form-control" /></td>
+                                                        <td class="align-middle"> <a class="fa fa-times text-secondary text-decoration-none delete" role="button" id=""></a></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td><a class="addOption text-decoration-none " role="button" id="add-option">+ Add Option</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                                {{-- <button type="button" class="btn btn-danger float-right delete-question">Delete</button> --}}
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row my-5">
+                                        <div class="col-md-6">        
+                                            <button type="submit" class="button-quiz text-capitalize">Save</button>  
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <form action="/created">
+                                                <button type="submit" class="button-quiz text-capitalize">Create</button>
+                                            </form>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </form> 
+                            </div>  
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                    <form action="">
-                                        <button type="submit" class="button-quiz text-capitalize">Save</button>
-                                    </form>
-                            </div>
-                            <div class="col-md-6 text-right">
-                                <form action="/created">
-                                    <button type="submit" class="button-quiz text-capitalize">Create</button>
-                                </form>
-                            </div>
-                            
-                        </div>
-                        
                     </div>
                 </div>    
                 
             </div>
         </div>
     </div>
-
+    <script src="{{ asset('js/createquiz.js') }}" defer></script>
 @endsection
