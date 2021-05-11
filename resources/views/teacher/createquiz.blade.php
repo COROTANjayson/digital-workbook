@@ -45,27 +45,50 @@
                             <div class="container">
                                 <form id="question-form" action="" method="GET">
                                     <div id="container-form">
+                                        <input type="text" name="questionTitle" placeholder="Question Title" class="form-control" />
                                         <div class="text-right py-2">
                                             <button type="button" class="btn btn-success" id="addQuestion">Add Question</button>
                                         </div>
-                                        <div class="question-box container bg-white p-3 border border-secondary rounded" id="questionBox">
+                                        <div class="question-box container bg-white p-3 my-3 border border-secondary rounded" id="questionBox">
+                                            
+                                            <div class="text-right" id="times">
+                                                <a class="fa fa-times text-secondary text-decoration-none delete-question" role="button" id=""></a>
+                                            </div>
+                                            
                                             <label for="question" class="form-label">Question: </label>
                                             <input type="text" name="question" placeholder="Enter Question" class="form-control" />
                                             
+                                            <div class="form-group row m-3" id="containerPoints">
+                                                <label for="points" class="col-sm-1 col-form-label">Points:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="number" class="form-control w-25" id="points" value="1" name="points" min="1">
+                                                </div>
+                                            </div>
                                             <div class=" container text-center py-3" id="option-container">
+                                                <h6 class="text-left">Select for correct answer</h6>
                                                 <table class="table my-2 table-borderless" >
+                                                    
                                                     <tbody id="table-option">
                                                       <tr>
-                                                        <td class="align-middle"><input type="text" name="option" placeholder="Option" class="form-control" /></td>
-                                                        <td class="align-middle"> <a class="fa fa-times text-secondary text-decoration-none delete" role="button" id=""></a></td>
+                                                        <td class="align-middle"><input type="checkbox" name="answer" value="option1" checked></td>
+                                                        <td class="align-middle"><input type="text" name="option1" id="option1" placeholder="Option 1" class="form-control" /></td>
                                                       </tr>
                                                       <tr>
-                                                        <td><a class="addOption text-decoration-none " role="button" id="add-option">+ Add Option</a></td>
+                                                        <td class="align-middle"><input type="checkbox" name="answer" value="option2"></td>
+                                                        <td class="align-middle"><input type="text" name="option2" id="option2" placeholder="Option 2" class="form-control" /></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-middle"><input type="checkbox" name="answer" value="option3"></td>
+                                                        <td class="align-middle"><input type="text" name="option3" id="option3" placeholder="Option 3" class="form-control" /></td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td class="align-middle"><input type="checkbox" name="answer" value="option4"></td>
+                                                        <td class="align-middle"><input type="text" name="option4" id="option4" placeholder="Option 4" class="form-control" /></td>
                                                       </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
-                                                {{-- <button type="button" class="btn btn-danger float-right delete-question">Delete</button> --}}
+                                                
                                             
                                         </div>
                                     </div>
